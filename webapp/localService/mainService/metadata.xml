@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://vhnrpds4ci.sap.ingerop.com:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZC_EMSP_REPORT_CDS" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZC_EMSP_REPORTResult" sap:label="Report EMSP" sap:semantics="aggregate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="UFOName" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:filter-restriction="interval" sap:label="UFO Delegue" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:filter-restriction="interval" sap:label="CDG" sap:quickinfo="Profit Center" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="rbaMEncoursCrit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBA M En Cours Crit" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="StartDate" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:semantics="yearmonthday"/>
+                <Property Name="StartDate_T" Type="Edm.String" MaxLength="10" sap:label="Date (Description)" sap:quickinfo="Date" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="BusinessName" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:filter-restriction="interval" sap:label="Affaire" sap:quickinfo="PS: Short description (1st text line)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="BusinessType" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="BUSINESSTYPE" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="Nom du Client" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="rbaN_1Crit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBAN_1CRIT" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="rbaCumulN_1Crit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBA Cumul N-1 Crit" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="BusinessManager" Type="Edm.String" MaxLength="25" sap:aggregation-role="dimension" sap:label="BUSINESSMANAGER" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ModifyDate" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Date derniere modification" sap:quickinfo="Date on which object was last changed" sap:creatable="false" sap:updatable="false" sap:semantics="yearmonthday"/>
+                <Property Name="ModifyDate_T" Type="Edm.String" MaxLength="10" sap:label="Date derniere modification (Description)" sap:quickinfo="Date on which object was last changed" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaM_1Crit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBAM_1CRIT" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="rbaNEncoursCrit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBA N En Cours Crit" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="departement" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="Departement" sap:quickinfo="Set Name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="BusinessStatus" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="Statut" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="rbaCumulCrit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBA Cumul Crit" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="rbaFinAffaireCrit" Type="Edm.Int32" sap:aggregation-role="dimension" sap:label="RBA fin Crit" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="NoClientMarche" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="N° Client" sap:quickinfo="Character Field with Length 10" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="BusinessNo" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:filter-restriction="interval" sap:label="N° Affaire" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="activity" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="Activite" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="date_fin" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Date fin de projet" sap:quickinfo="WBS element: Basic finish date" sap:creatable="false" sap:updatable="false" sap:semantics="yearmonthday"/>
+                <Property Name="date_fin_T" Type="Edm.String" MaxLength="10" sap:label="Date fin de projet (Description)" sap:quickinfo="WBS element: Basic finish date" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="EndDate" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:semantics="yearmonthday"/>
+                <Property Name="EndDate_T" Type="Edm.String" MaxLength="10" sap:label="Date (Description)" sap:quickinfo="Date" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="mission" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="Type de Mission" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ModifyBy" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:label="Modifier par" sap:quickinfo="Name of Person Who Changed Object" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="NClient" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="NCLIENT" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="pole" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="Pole" sap:quickinfo="Set Name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="project" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="Project" sap:quickinfo="Number of the superior WBS element" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="PROJM" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:label="Responsable" sap:quickinfo="Number of the Responsible Person (Project Manager)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Type" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Type" sap:quickinfo="Project Type" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ufo" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="UFO" sap:quickinfo="Set Name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ufo_p" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="UFO +" sap:quickinfo="Set Name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ufo_pp" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:label="UFO ++" sap:quickinfo="Set Name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="caBudgetN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caBudgetN_1_F" sap:updatable="false" sap:label="CA Budget Fin N-1" sap:creatable="false"/>
+                <Property Name="caBudgetN_1_F" Type="Edm.String" MaxLength="60" sap:label="CA Budget Fin N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caBudgetM_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caBudgetM_1_F" sap:updatable="false" sap:label="CA Budget Fin M-1" sap:creatable="false"/>
+                <Property Name="caBudgetM_1_F" Type="Edm.String" MaxLength="60" sap:label="CA Budget Fin M-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caVariationN" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caVariationN_F" sap:updatable="false" sap:label="Variation de CA N" sap:creatable="false"/>
+                <Property Name="caVariationN_F" Type="Edm.String" MaxLength="60" sap:label="Variation de CA N (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caVariationM" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caVariationM_F" sap:updatable="false" sap:label="Variation de CA M" sap:creatable="false"/>
+                <Property Name="caVariationM_F" Type="Edm.String" MaxLength="60" sap:label="Variation de CA M (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caFinAffaire" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caFinAffaire_F" sap:updatable="false" sap:label="CA fin affaire" sap:creatable="false"/>
+                <Property Name="caFinAffaire_F" Type="Edm.String" MaxLength="60" sap:label="CA fin affaire (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caNonAcquis" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caNonAcquis_F" sap:updatable="false" sap:label="CA non acquis" sap:creatable="false"/>
+                <Property Name="caNonAcquis_F" Type="Edm.String" MaxLength="60" sap:label="CA non acquis (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caReclame" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caReclame_F" sap:updatable="false" sap:label="CA Reclame" sap:creatable="false"/>
+                <Property Name="caReclame_F" Type="Edm.String" MaxLength="60" sap:label="CA Reclame (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationExterne" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationExterne_F" sap:updatable="false" sap:label="Facturation Externe" sap:creatable="false"/>
+                <Property Name="facturationExterne_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Externe (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationGroupe" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationGroupe_F" sap:updatable="false" sap:label="Facturation Groupe" sap:creatable="false"/>
+                <Property Name="facturationGroupe_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Groupe (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddInterUfo" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddInterUfo_F" sap:updatable="false" sap:label="NDD inter UFO" sap:creatable="false"/>
+                <Property Name="nddInterUfo_F" Type="Edm.String" MaxLength="60" sap:label="NDD inter UFO (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddIntraUfo" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddIntraUfo_F" sap:updatable="false" sap:label="NDD intra UFO" sap:creatable="false"/>
+                <Property Name="nddIntraUfo_F" Type="Edm.String" MaxLength="60" sap:label="NDD intra UFO (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresProduits" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresProduits_F" sap:updatable="false" sap:label="Autres produits" sap:creatable="false"/>
+                <Property Name="autresProduits_F" Type="Edm.String" MaxLength="60" sap:label="Autres produits (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesBudgetN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesBudgetN_1_F" sap:updatable="false" sap:label="Depenses Budget fin N-1" sap:creatable="false"/>
+                <Property Name="depensesBudgetN_1_F" Type="Edm.String" MaxLength="60" sap:label="Depenses Budget fin N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesBudgetM_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesBudgetM_1_F" sap:updatable="false" sap:label="Depenses Budget fin M-1" sap:creatable="false"/>
+                <Property Name="depensesBudgetM_1_F" Type="Edm.String" MaxLength="60" sap:label="Depenses Budget fin M-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caVariationDepenseN" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caVariationDepenseN_F" sap:updatable="false" sap:label="Variation Depenses N" sap:creatable="false"/>
+                <Property Name="caVariationDepenseN_F" Type="Edm.String" MaxLength="60" sap:label="Variation Depenses N (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caVariationDepenseM" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caVariationDepenseM_F" sap:updatable="false" sap:label="Variation Depenses M-1" sap:creatable="false"/>
+                <Property Name="caVariationDepenseM_F" Type="Edm.String" MaxLength="60" sap:label="Variation Depenses M-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesFinAffaire" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesFinAffaire_F" sap:updatable="false" sap:label="Depenses fin affaire" sap:creatable="false"/>
+                <Property Name="depensesFinAffaire_F" Type="Edm.String" MaxLength="60" sap:label="Depenses fin affaire (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stGroupe" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stGroupe_F" sap:updatable="false" sap:label="ST Groupe" sap:creatable="false"/>
+                <Property Name="stGroupe_F" Type="Edm.String" MaxLength="60" sap:label="ST Groupe (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stExterne" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stExterne_F" sap:updatable="false" sap:label="ST Externe" sap:creatable="false"/>
+                <Property Name="stExterne_F" Type="Edm.String" MaxLength="60" sap:label="ST Externe (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="mainOeuvre" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="mainOeuvre_F" sap:updatable="false" sap:label="Main d oeuvre" sap:creatable="false"/>
+                <Property Name="mainOeuvre_F" Type="Edm.String" MaxLength="60" sap:label="Main d oeuvre (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresFrais" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresFrais_F" sap:updatable="false" sap:label="Autres Frais" sap:creatable="false"/>
+                <Property Name="autresFrais_F" Type="Edm.String" MaxLength="60" sap:label="Autres Frais (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaN_1_F" sap:updatable="false" sap:label="RBA fin N-1" sap:creatable="false"/>
+                <Property Name="rbaN_1_F" Type="Edm.String" MaxLength="60" sap:label="RBA fin N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaM_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaM_1_F" sap:updatable="false" sap:label="RBA fin M-1" sap:creatable="false"/>
+                <Property Name="rbaM_1_F" Type="Edm.String" MaxLength="60" sap:label="RBA fin M-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaVariationN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaVariationN_1_F" sap:updatable="false" sap:label="Variation RBA N" sap:creatable="false"/>
+                <Property Name="rbaVariationN_1_F" Type="Edm.String" MaxLength="60" sap:label="Variation RBA N (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaVariationM_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaVariationM_1_F" sap:updatable="false" sap:label="Variation RBA M" sap:creatable="false"/>
+                <Property Name="rbaVariationM_1_F" Type="Edm.String" MaxLength="60" sap:label="Variation RBA M (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaFinAffaire" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaFinAffaire_F" sap:updatable="false" sap:label="RBA fin Affaire" sap:creatable="false"/>
+                <Property Name="rbaFinAffaire_F" Type="Edm.String" MaxLength="60" sap:label="RBA fin Affaire (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="aleasEtudeTravaux" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="aleasEtudeTravaux_F" sap:updatable="false" sap:label="Aleas - Etudes et travaux" sap:creatable="false"/>
+                <Property Name="aleasEtudeTravaux_F" Type="Edm.String" MaxLength="60" sap:label="Aleas - Etudes et travaux (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="aleasSinistresContentieux" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="aleasSinistresContentieux_F" sap:updatable="false" sap:label="Aleas Sinistres et contentieux" sap:creatable="false"/>
+                <Property Name="aleasSinistresContentieux_F" Type="Edm.String" MaxLength="60" sap:label="Aleas Sinistres et contentieux (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="aleasDivers" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="aleasDivers_F" sap:updatable="false" sap:label="Aleas Divers" sap:creatable="false"/>
+                <Property Name="aleasDivers_F" Type="Edm.String" MaxLength="60" sap:label="Aleas Divers (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="creancesClients" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="creancesClients_F" sap:updatable="false" sap:label="Creances clients" sap:creatable="false"/>
+                <Property Name="creancesClients_F" Type="Edm.String" MaxLength="60" sap:label="Creances clients (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Depenses" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="Depenses_F" sap:updatable="false" sap:label="Budget Objectif Depenses" sap:creatable="false"/>
+                <Property Name="Depenses_F" Type="Edm.String" MaxLength="60" sap:label="Budget Objectif Depenses (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="Recettes" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="Recettes_F" sap:updatable="false" sap:label="Budget Objectifs Recette" sap:creatable="false"/>
+                <Property Name="Recettes_F" Type="Edm.String" MaxLength="60" sap:label="Budget Objectifs Recette (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caCumulN_1_F" sap:updatable="false" sap:label="CA Cumul N-1" sap:creatable="false"/>
+                <Property Name="caCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="CA Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationExterneCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationExterneCumulN_1_F" sap:updatable="false" sap:label="Facturation Externe Cumul N-1" sap:creatable="false"/>
+                <Property Name="facturationExterneCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Externe Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationGroupeCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationGroupeCumulN_1_F" sap:updatable="false" sap:label="Facturation Groupe Cumul N-1" sap:creatable="false"/>
+                <Property Name="facturationGroupeCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Groupe Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddInterUfoCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddInterUfoCumulN_1_F" sap:updatable="false" sap:label="NDD Inter UFO Cumul N-1" sap:creatable="false"/>
+                <Property Name="nddInterUfoCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="NDD Inter UFO Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddIntraUfoCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddIntraUfoCumulN_1_F" sap:updatable="false" sap:label="NDD Intra UFO Cumul N-1" sap:creatable="false"/>
+                <Property Name="nddIntraUfoCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="NDD Intra UFO Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresProduitsCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresProduitsCumulN_1_F" sap:updatable="false" sap:label="Autres produits Cumul N-1" sap:creatable="false"/>
+                <Property Name="autresProduitsCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Autres produits Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesCumulN_1_F" sap:updatable="false" sap:label="Depenses Cumul N-1" sap:creatable="false"/>
+                <Property Name="depensesCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Depenses Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stGroupeCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stGroupeCumulN_1_F" sap:updatable="false" sap:label="ST Groupe Cumul N-1" sap:creatable="false"/>
+                <Property Name="stGroupeCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="ST Groupe Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stExterneCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stExterneCumulN_1_F" sap:updatable="false" sap:label="ST Externe Cumul N-1" sap:creatable="false"/>
+                <Property Name="stExterneCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="ST Externe Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="mainOeuvreCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="mainOeuvreCumulN_1_F" sap:updatable="false" sap:label="Main Oeuvre Cumul N-1" sap:creatable="false"/>
+                <Property Name="mainOeuvreCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Main Oeuvre Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresFraisCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresFraisCumulN_1_F" sap:updatable="false" sap:label="Autres Frais Cumul N-1" sap:creatable="false"/>
+                <Property Name="autresFraisCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Autres Frais Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ajustementCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="ajustementCumulN_1_F" sap:updatable="false" sap:label="Ajustement Cumul N-1" sap:creatable="false"/>
+                <Property Name="ajustementCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Ajustement Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="avcmntPercentCumulN_1" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="avcmntPercentCumulN_1_F" sap:updatable="false" sap:label="Pourcent Avancement Cumul N-1" sap:creatable="false"/>
+                <Property Name="avcmntPercentCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Pourcent Avancement Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="patCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="patCumulN_1_F" sap:updatable="false" sap:label="PAT Cumul N-1" sap:creatable="false"/>
+                <Property Name="patCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="PAT Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaCumulN_1" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaCumulN_1_F" sap:updatable="false" sap:label="RBA Cumul N-1" sap:creatable="false"/>
+                <Property Name="rbaCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="RBA Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaPercentCumulN_1" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaPercentCumulN_1_F" sap:updatable="false" sap:label="Pourcent RBA Cumul N-1" sap:creatable="false"/>
+                <Property Name="rbaPercentCumulN_1_F" Type="Edm.String" MaxLength="60" sap:label="Pourcent RBA Cumul N-1 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caCumul_F" sap:updatable="false" sap:label="CA Cumul" sap:creatable="false"/>
+                <Property Name="caCumul_F" Type="Edm.String" MaxLength="60" sap:label="CA Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationExterneCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationExterneCumul_F" sap:updatable="false" sap:label="Facturation Externe Cumul" sap:creatable="false"/>
+                <Property Name="facturationExterneCumul_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Externe Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationGroupeCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationGroupeCumul_F" sap:updatable="false" sap:label="Facturation Groupe Cumul" sap:creatable="false"/>
+                <Property Name="facturationGroupeCumul_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Groupe Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddInterUfoCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddInterUfoCumul_F" sap:updatable="false" sap:label="NDD Inter UFO Cumul" sap:creatable="false"/>
+                <Property Name="nddInterUfoCumul_F" Type="Edm.String" MaxLength="60" sap:label="NDD Inter UFO Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddIntraUfoCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddIntraUfoCumul_F" sap:updatable="false" sap:label="NDD Intra UFO Cumul" sap:creatable="false"/>
+                <Property Name="nddIntraUfoCumul_F" Type="Edm.String" MaxLength="60" sap:label="NDD Intra UFO Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresProduitsCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresProduitsCumul_F" sap:updatable="false" sap:label="Autres Produits Cumul" sap:creatable="false"/>
+                <Property Name="autresProduitsCumul_F" Type="Edm.String" MaxLength="60" sap:label="Autres Produits Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesCumul_F" sap:updatable="false" sap:label="Depenses Cumul" sap:creatable="false"/>
+                <Property Name="depensesCumul_F" Type="Edm.String" MaxLength="60" sap:label="Depenses Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stGroupeCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stGroupeCumul_F" sap:updatable="false" sap:label="ST Groupe Cumul" sap:creatable="false"/>
+                <Property Name="stGroupeCumul_F" Type="Edm.String" MaxLength="60" sap:label="ST Groupe Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stExterneCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stExterneCumul_F" sap:updatable="false" sap:label="ST Externe Cumul" sap:creatable="false"/>
+                <Property Name="stExterneCumul_F" Type="Edm.String" MaxLength="60" sap:label="ST Externe Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="mainOeuvreCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="mainOeuvreCumul_F" sap:updatable="false" sap:label="Main Oeuvre Cumul" sap:creatable="false"/>
+                <Property Name="mainOeuvreCumul_F" Type="Edm.String" MaxLength="60" sap:label="Main Oeuvre Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresFraisCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresFraisCumul_F" sap:updatable="false" sap:label="Autres Frais Cumul" sap:creatable="false"/>
+                <Property Name="autresFraisCumul_F" Type="Edm.String" MaxLength="60" sap:label="Autres Frais Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ajustementCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="ajustementCumul_F" sap:updatable="false" sap:label="Ajustement Cumul" sap:creatable="false"/>
+                <Property Name="ajustementCumul_F" Type="Edm.String" MaxLength="60" sap:label="Ajustement Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="avcmntPercentCumul" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="avcmntPercentCumul_F" sap:updatable="false" sap:label="Pourcent Avancement Cumul" sap:creatable="false"/>
+                <Property Name="avcmntPercentCumul_F" Type="Edm.String" MaxLength="60" sap:label="Pourcent Avancement Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="patCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="patCumul_F" sap:updatable="false" sap:label="PAT Cumul" sap:creatable="false"/>
+                <Property Name="patCumul_F" Type="Edm.String" MaxLength="60" sap:label="PAT Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaCumul" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaCumul_F" sap:updatable="false" sap:label="RBA Cumul" sap:creatable="false"/>
+                <Property Name="rbaCumul_F" Type="Edm.String" MaxLength="60" sap:label="RBA Cumul (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caNEncours_F" sap:updatable="false" sap:label="CA NEncours" sap:creatable="false"/>
+                <Property Name="caNEncours_F" Type="Edm.String" MaxLength="60" sap:label="CA NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationExterneNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationExterneNEncours_F" sap:updatable="false" sap:label="Facturation Externe NEncours" sap:creatable="false"/>
+                <Property Name="facturationExterneNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Externe NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationGroupeNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationGroupeNEncours_F" sap:updatable="false" sap:label="Facturation Groupe NEncours" sap:creatable="false"/>
+                <Property Name="facturationGroupeNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Groupe NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddInterUfoNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddInterUfoNEncours_F" sap:updatable="false" sap:label="NDD Inter UFO NEncours" sap:creatable="false"/>
+                <Property Name="nddInterUfoNEncours_F" Type="Edm.String" MaxLength="60" sap:label="NDD Inter UFO NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddIntraUfoNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddIntraUfoNEncours_F" sap:updatable="false" sap:label="NDD Intra UFO NEncours" sap:creatable="false"/>
+                <Property Name="nddIntraUfoNEncours_F" Type="Edm.String" MaxLength="60" sap:label="NDD Intra UFO NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresProduitsNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresProduitsNEncours_F" sap:updatable="false" sap:label="Autres Produits NEncours" sap:creatable="false"/>
+                <Property Name="autresProduitsNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Autres Produits NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesNEncours_F" sap:updatable="false" sap:label="Depenses NEncours" sap:creatable="false"/>
+                <Property Name="depensesNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Depenses NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stGroupeNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stGroupeNEncours_F" sap:updatable="false" sap:label="ST Groupe NEncours" sap:creatable="false"/>
+                <Property Name="stGroupeNEncours_F" Type="Edm.String" MaxLength="60" sap:label="ST Groupe NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stExterneNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stExterneNEncours_F" sap:updatable="false" sap:label="ST Externe NEncours" sap:creatable="false"/>
+                <Property Name="stExterneNEncours_F" Type="Edm.String" MaxLength="60" sap:label="ST Externe NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="mainOeuvreNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="mainOeuvreNEncours_F" sap:updatable="false" sap:label="Main Oeuvre NEncours" sap:creatable="false"/>
+                <Property Name="mainOeuvreNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Main Oeuvre NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresFraisNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresFraisNEncours_F" sap:updatable="false" sap:label="Autres Frais NEncours" sap:creatable="false"/>
+                <Property Name="autresFraisNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Autres Frais NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="avcmntPercentNEncours" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="avcmntPercentNEncours_F" sap:updatable="false" sap:label="Pourcent avancement NEncours" sap:creatable="false"/>
+                <Property Name="avcmntPercentNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Pourcent avancement NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ajustementNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="ajustementNEncours_F" sap:updatable="false" sap:label="Ajustement NEncours" sap:creatable="false"/>
+                <Property Name="ajustementNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Ajustement NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="patNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="patNEncours_F" sap:updatable="false" sap:label="PAT NEncours" sap:creatable="false"/>
+                <Property Name="patNEncours_F" Type="Edm.String" MaxLength="60" sap:label="PAT NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaNEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaNEncours_F" sap:updatable="false" sap:label="Rba NEncours" sap:creatable="false"/>
+                <Property Name="rbaNEncours_F" Type="Edm.String" MaxLength="60" sap:label="Rba NEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="caMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="caMEncours_F" sap:updatable="false" sap:label="CA MEncours" sap:creatable="false"/>
+                <Property Name="caMEncours_F" Type="Edm.String" MaxLength="60" sap:label="CA MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationExterneMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationExterneMEncours_F" sap:updatable="false" sap:label="Facturation Externe MEncours" sap:creatable="false"/>
+                <Property Name="facturationExterneMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Externe MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="facturationGroupeMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="facturationGroupeMEncours_F" sap:updatable="false" sap:label="Facturation Groupe MEncours" sap:creatable="false"/>
+                <Property Name="facturationGroupeMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Facturation Groupe MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddInterUfoMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddInterUfoMEncours_F" sap:updatable="false" sap:label="NDD Inter UFO MEncours" sap:creatable="false"/>
+                <Property Name="nddInterUfoMEncours_F" Type="Edm.String" MaxLength="60" sap:label="NDD Inter UFO MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="nddIntraUfoMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="nddIntraUfoMEncours_F" sap:updatable="false" sap:label="NDD Intra UFO MEncours" sap:creatable="false"/>
+                <Property Name="nddIntraUfoMEncours_F" Type="Edm.String" MaxLength="60" sap:label="NDD Intra UFO MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresProduitsMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresProduitsMEncours_F" sap:updatable="false" sap:label="Autres Produits MEncours" sap:creatable="false"/>
+                <Property Name="autresProduitsMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Autres Produits MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="depensesMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="depensesMEncours_F" sap:updatable="false" sap:label="Depenses MEncours" sap:creatable="false"/>
+                <Property Name="depensesMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Depenses MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stGroupeMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stGroupeMEncours_F" sap:updatable="false" sap:label="ST Groupe MEncours" sap:creatable="false"/>
+                <Property Name="stGroupeMEncours_F" Type="Edm.String" MaxLength="60" sap:label="ST Groupe MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="stExterneMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="stExterneMEncours_F" sap:updatable="false" sap:label="ST Externe MEncours" sap:creatable="false"/>
+                <Property Name="stExterneMEncours_F" Type="Edm.String" MaxLength="60" sap:label="ST Externe MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="mainOeuvreMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="mainOeuvreMEncours_F" sap:updatable="false" sap:label="Main Oeuvre MEncours" sap:creatable="false"/>
+                <Property Name="mainOeuvreMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Main Oeuvre MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="autresFraisMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="autresFraisMEncours_F" sap:updatable="false" sap:label="Autres Frais MEncours" sap:creatable="false"/>
+                <Property Name="autresFraisMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Autres Frais MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="avcmntPercentMEncours" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="avcmntPercentMEncours_F" sap:updatable="false" sap:label="Pourcent MEncours" sap:creatable="false"/>
+                <Property Name="avcmntPercentMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Pourcent MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ajustementMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="ajustementMEncours_F" sap:updatable="false" sap:label="Ajustement MEncours" sap:creatable="false"/>
+                <Property Name="ajustementMEncours_F" Type="Edm.String" MaxLength="60" sap:label="Ajustement MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="patMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="patMEncours_F" sap:updatable="false" sap:label="PAT MEncours" sap:creatable="false"/>
+                <Property Name="patMEncours_F" Type="Edm.String" MaxLength="60" sap:label="PAT MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="rbaMEncours" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="rbaMEncours_F" sap:updatable="false" sap:label="RBA MEncours" sap:creatable="false"/>
+                <Property Name="rbaMEncours_F" Type="Edm.String" MaxLength="60" sap:label="RBA MEncours (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Parameters" Relationship="ZC_EMSP_REPORT_CDS.ZCEMSPREPORTParametersToResult" FromRole="ToRole_ZCEMSPREPORTParametersToResult" ToRole="FromRole_ZCEMSPREPORTParametersToResult"/>
+            </EntityType>
+            <EntityType Name="ZC_EMSP_REPORTParameters" sap:semantics="parameters" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="p_period"/>
+                </Key>
+                <Property Name="p_period" Type="Edm.String" Nullable="false" MaxLength="6" sap:parameter="mandatory" sap:text="p_periodText" sap:label="Period MMYYYY" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_periodText" Type="Edm.String" MaxLength="60" sap:label="Period MMYYYY (Description) " sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Results" Relationship="ZC_EMSP_REPORT_CDS.ZCEMSPREPORTParametersToResult" FromRole="FromRole_ZCEMSPREPORTParametersToResult" ToRole="ToRole_ZCEMSPREPORTParametersToResult"/>
+                <NavigationProperty Name="BusinessStatusResults" Relationship="ZC_EMSP_REPORT_CDS.BusinessStatusResultsToParameters" FromRole="FromRole_BusinessStatusResultsToParameters" ToRole="ToRole_BusinessStatusResultsToParameters"/>
+                <NavigationProperty Name="missionResults" Relationship="ZC_EMSP_REPORT_CDS.missionResultsToParameters" FromRole="FromRole_missionResultsToParameters" ToRole="ToRole_missionResultsToParameters"/>
+            </EntityType>
+            <EntityType Name="BusinessStatus" sap:label="Statut (Master Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BusinessStatus_ID"/>
+                </Key>
+                <Property Name="BusinessStatus_ID" Type="Edm.String" Nullable="false" MaxLength="1" sap:text="BusinessStatusText" sap:label="Statut" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessStatusText" Type="Edm.String" sap:label="Statut (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="BusinessStatusResult" sap:label="Statut (Booked Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BusinessStatus"/>
+                </Key>
+                <Property Name="BusinessStatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Statut" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="UFOName" Type="Edm.String" MaxLength="10" sap:label="UFO Delegue" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10" sap:label="CDG" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaMEncoursCrit" Type="Edm.Int32" sap:label="RBA M En Cours Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="StartDate" Type="Edm.String" MaxLength="10" sap:text="StartDate_T" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="StartDate_T" Type="Edm.String" sap:label="Date (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BusinessName" Type="Edm.String" MaxLength="40" sap:label="Affaire" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessType" Type="Edm.String" MaxLength="2" sap:label="BUSINESSTYPE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="40" sap:label="Nom du Client" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaN_1Crit" Type="Edm.Int32" sap:label="RBAN_1CRIT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaCumulN_1Crit" Type="Edm.Int32" sap:label="RBA Cumul N-1 Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessManager" Type="Edm.String" MaxLength="25" sap:label="BUSINESSMANAGER" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ModifyDate" Type="Edm.String" MaxLength="10" sap:text="ModifyDate_T" sap:label="Date derniere modification" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ModifyDate_T" Type="Edm.String" sap:label="Date derniere modification (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="rbaM_1Crit" Type="Edm.Int32" sap:label="RBAM_1CRIT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaNEncoursCrit" Type="Edm.Int32" sap:label="RBA N En Cours Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="departement" Type="Edm.String" MaxLength="24" sap:label="Departement" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaCumulCrit" Type="Edm.Int32" sap:label="RBA Cumul Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaFinAffaireCrit" Type="Edm.Int32" sap:label="RBA fin Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="NoClientMarche" Type="Edm.String" MaxLength="10" sap:label="N° Client" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessNo" Type="Edm.String" MaxLength="24" sap:label="N° Affaire" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="activity" Type="Edm.String" MaxLength="24" sap:label="Activite" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="date_fin" Type="Edm.String" MaxLength="10" sap:text="date_fin_T" sap:label="Date fin de projet" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="date_fin_T" Type="Edm.String" sap:label="Date fin de projet (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EndDate" Type="Edm.String" MaxLength="10" sap:text="EndDate_T" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="EndDate_T" Type="Edm.String" sap:label="Date (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="mission" Type="Edm.String" MaxLength="40" sap:label="Type de Mission" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ModifyBy" Type="Edm.String" MaxLength="12" sap:label="Modifier par" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="NClient" Type="Edm.String" MaxLength="10" sap:label="NCLIENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="pole" Type="Edm.String" MaxLength="24" sap:label="Pole" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="project" Type="Edm.String" MaxLength="24" sap:label="Project" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="PROJM" Type="Edm.String" MaxLength="8" sap:label="Responsable" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Type" Type="Edm.String" MaxLength="2" sap:label="Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ufo" Type="Edm.String" MaxLength="24" sap:label="UFO" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ufo_p" Type="Edm.String" MaxLength="24" sap:label="UFO +" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ufo_pp" Type="Edm.String" MaxLength="24" sap:label="UFO ++" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <NavigationProperty Name="Parameters" Relationship="ZC_EMSP_REPORT_CDS.BusinessStatusResultsToParameters" FromRole="ToRole_BusinessStatusResultsToParameters" ToRole="FromRole_BusinessStatusResultsToParameters"/>
+            </EntityType>
+            <EntityType Name="mission" sap:label="Type de Mission (Master Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="mission_ID"/>
+                </Key>
+                <Property Name="mission_ID" Type="Edm.String" Nullable="false" MaxLength="40" sap:text="missionText" sap:label="Type de Mission" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="missionText" Type="Edm.String" sap:label="Type de Mission (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="missionResult" sap:label="Type de Mission (Booked Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="mission"/>
+                </Key>
+                <Property Name="mission" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Type de Mission" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="UFOName" Type="Edm.String" MaxLength="10" sap:label="UFO Delegue" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10" sap:label="CDG" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaMEncoursCrit" Type="Edm.Int32" sap:label="RBA M En Cours Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="StartDate" Type="Edm.String" MaxLength="10" sap:text="StartDate_T" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="StartDate_T" Type="Edm.String" sap:label="Date (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BusinessName" Type="Edm.String" MaxLength="40" sap:label="Affaire" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessType" Type="Edm.String" MaxLength="2" sap:label="BUSINESSTYPE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="40" sap:label="Nom du Client" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaN_1Crit" Type="Edm.Int32" sap:label="RBAN_1CRIT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaCumulN_1Crit" Type="Edm.Int32" sap:label="RBA Cumul N-1 Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessManager" Type="Edm.String" MaxLength="25" sap:label="BUSINESSMANAGER" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ModifyDate" Type="Edm.String" MaxLength="10" sap:text="ModifyDate_T" sap:label="Date derniere modification" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ModifyDate_T" Type="Edm.String" sap:label="Date derniere modification (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="rbaM_1Crit" Type="Edm.Int32" sap:label="RBAM_1CRIT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaNEncoursCrit" Type="Edm.Int32" sap:label="RBA N En Cours Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="departement" Type="Edm.String" MaxLength="24" sap:label="Departement" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessStatus" Type="Edm.String" MaxLength="1" sap:label="Statut" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaCumulCrit" Type="Edm.Int32" sap:label="RBA Cumul Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="rbaFinAffaireCrit" Type="Edm.Int32" sap:label="RBA fin Crit" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="NoClientMarche" Type="Edm.String" MaxLength="10" sap:label="N° Client" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="BusinessNo" Type="Edm.String" MaxLength="24" sap:label="N° Affaire" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="activity" Type="Edm.String" MaxLength="24" sap:label="Activite" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="date_fin" Type="Edm.String" MaxLength="10" sap:text="date_fin_T" sap:label="Date fin de projet" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="date_fin_T" Type="Edm.String" sap:label="Date fin de projet (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EndDate" Type="Edm.String" MaxLength="10" sap:text="EndDate_T" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="EndDate_T" Type="Edm.String" sap:label="Date (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ModifyBy" Type="Edm.String" MaxLength="12" sap:label="Modifier par" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="NClient" Type="Edm.String" MaxLength="10" sap:label="NCLIENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="pole" Type="Edm.String" MaxLength="24" sap:label="Pole" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="project" Type="Edm.String" MaxLength="24" sap:label="Project" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="PROJM" Type="Edm.String" MaxLength="8" sap:label="Responsable" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Type" Type="Edm.String" MaxLength="2" sap:label="Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ufo" Type="Edm.String" MaxLength="24" sap:label="UFO" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ufo_p" Type="Edm.String" MaxLength="24" sap:label="UFO +" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ufo_pp" Type="Edm.String" MaxLength="24" sap:label="UFO ++" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <NavigationProperty Name="Parameters" Relationship="ZC_EMSP_REPORT_CDS.missionResultsToParameters" FromRole="ToRole_missionResultsToParameters" ToRole="FromRole_missionResultsToParameters"/>
+            </EntityType>
+            <EntityType Name="ODataQueryAdditionalMetadata" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ODataQueryMetadata"/>
+                </Key>
+                <Property Name="ODataQueryMetadata" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ODataQueryMetadataValue_Current" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ODataQueryMetadataValueAtDefine" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="BusinessStatusResultsToParameters" sap:content-version="1">
+                <End Type="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTParameters" Multiplicity="1" Role="FromRole_BusinessStatusResultsToParameters"/>
+                <End Type="ZC_EMSP_REPORT_CDS.BusinessStatusResult" Multiplicity="*" Role="ToRole_BusinessStatusResultsToParameters"/>
+            </Association>
+            <Association Name="missionResultsToParameters" sap:content-version="1">
+                <End Type="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTParameters" Multiplicity="1" Role="FromRole_missionResultsToParameters"/>
+                <End Type="ZC_EMSP_REPORT_CDS.missionResult" Multiplicity="*" Role="ToRole_missionResultsToParameters"/>
+            </Association>
+            <Association Name="ZCEMSPREPORTParametersToResult" sap:content-version="1">
+                <End Type="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTParameters" Multiplicity="1" Role="FromRole_ZCEMSPREPORTParametersToResult"/>
+                <End Type="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTResult" Multiplicity="*" Role="ToRole_ZCEMSPREPORTParametersToResult"/>
+            </Association>
+            <EntityContainer Name="ZC_EMSP_REPORT_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="BusinessStatus" EntityType="ZC_EMSP_REPORT_CDS.BusinessStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="BusinessStatusResults" EntityType="ZC_EMSP_REPORT_CDS.BusinessStatusResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="mission" EntityType="ZC_EMSP_REPORT_CDS.mission" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="missionResults" EntityType="ZC_EMSP_REPORT_CDS.missionResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AdditionalMetadata" EntityType="ZC_EMSP_REPORT_CDS.ODataQueryAdditionalMetadata" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_EMSP_REPORTResults" EntityType="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_EMSP_REPORT" EntityType="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTParameters" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="missionResultsToParameters_AssocSet" Association="ZC_EMSP_REPORT_CDS.missionResultsToParameters" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_EMSP_REPORT" Role="FromRole_missionResultsToParameters"/>
+                    <End EntitySet="missionResults" Role="ToRole_missionResultsToParameters"/>
+                </AssociationSet>
+                <AssociationSet Name="BusinessStatusResultsToParameters_AssocS" Association="ZC_EMSP_REPORT_CDS.BusinessStatusResultsToParameters" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_EMSP_REPORT" Role="FromRole_BusinessStatusResultsToParameters"/>
+                    <End EntitySet="BusinessStatusResults" Role="ToRole_BusinessStatusResultsToParameters"/>
+                </AssociationSet>
+                <AssociationSet Name="ZCEMSPREPORTParametersToResult_AssocSet" Association="ZC_EMSP_REPORT_CDS.ZCEMSPREPORTParametersToResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_EMSP_REPORT" Role="FromRole_ZCEMSPREPORTParametersToResult"/>
+                    <End EntitySet="ZC_EMSP_REPORTResults" Role="ToRole_ZCEMSPREPORTParametersToResult"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTResult/BusinessStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Statut ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="BusinessStatus"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="BusinessStatus"/>
+                                    <PropertyValue Property="ValueListProperty" String="BusinessStatus_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessStatusText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_EMSP_REPORT_CDS.ZC_EMSP_REPORTResult/mission" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Type de Mission ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="mission"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="mission"/>
+                                    <PropertyValue Property="ValueListProperty" String="mission_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="missionText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://vhnrpds4ci.sap.ingerop.com:44300/sap/opu/odata/sap/ZC_EMSP_REPORT_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://vhnrpds4ci.sap.ingerop.com:44300/sap/opu/odata/sap/ZC_EMSP_REPORT_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

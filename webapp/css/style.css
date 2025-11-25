@@ -1,0 +1,24 @@
+/* Fond de toute la ligne du header */
+#com\.avv\.ingerop\.emx\.emspreport\:\:sap\.suite\.ui\.generic\.template\.AnalyticalListPage\.view\.AnalyticalListPage\:\:ZC_EMSP_REPORTResults--table .sapUiTableColHdrTr {
+  background-color: #333399 !important;
+}
+
+.sapUiTableHeaderDataCell .sapMLabel, .sapMListTbl .sapMColumnHeader .sapMLabel {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* Texte noir au survol (hover) */
+#com\.avv\.ingerop\.emx\.emspreport\:\:sap\.suite\.ui\.generic\.template\.AnalyticalListPage\.view\.AnalyticalListPage\:\:ZC_EMSP_REPORTResults--table .sapUiTableHeaderCell:not(.sapUiTableRowActionHeaderCell):hover .sapMLabel {
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.sapUiTableTr.sapUiTableSummaryRow * {
+    color: white;
+    background-color: #ccccff;
+}
+ 
+.sapUiTableTr.sapUiTableSummaryRow.sapUiTableRowFirstFixedBottom * {
+    background-color: #333399 !important;
+}

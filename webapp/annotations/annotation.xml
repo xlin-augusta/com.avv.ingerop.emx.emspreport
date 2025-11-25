@@ -1,0 +1,534 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZC_EMSP_REPORT_CDS/$metadata">
+        <edmx:Include Namespace="ZC_EMSP_REPORT_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+
+            <!-- Pour forcer l'affichage simple -->
+            <Annotations Target="SAP.ZC_EMSP_REPORTResult">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                        <PropertyValue Property="Label" String="{@i18n>caBudgetFinN1}" />
+                            <PropertyValue Property="Value" Path="caBudgetN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caBudgetFinM1}" />
+                            <PropertyValue Property="Value" Path="caBudgetM_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>variationDeCaN}" />
+                            <PropertyValue Property="Value" Path="caVariationN_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>variationDeCaM}" />
+                            <PropertyValue Property="Value" Path="caVariationM_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caFinAffaire}" />
+                            <PropertyValue Property="Value" Path="caFinAffaire_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caNonAcquis}" />
+                            <PropertyValue Property="Value" Path="caNonAcquis_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caReclame}" />
+                            <PropertyValue Property="Value" Path="caReclame_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationExterne}" />
+                            <PropertyValue Property="Value" Path="facturationExterne_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationGroupe}" />
+                            <PropertyValue Property="Value" Path="facturationGroupe_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddInterUfo}" />
+                            <PropertyValue Property="Value" Path="nddInterUfo_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddIntraUfo}" />
+                            <PropertyValue Property="Value" Path="nddIntraUfo_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresProduits}" />
+                            <PropertyValue Property="Value" Path="autresProduits_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesBudgetFinN1}" />
+                            <PropertyValue Property="Value" Path="depensesBudgetN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesBudgetFinM1}" />
+                            <PropertyValue Property="Value" Path="depensesBudgetM_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>variationDepensesN}" />
+                            <PropertyValue Property="Value" Path="caVariationDepenseN_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>variationDepensesM1}" />
+                            <PropertyValue Property="Value" Path="caVariationDepenseM_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesFinAffaire}" />
+                            <PropertyValue Property="Value" Path="depensesFinAffaire_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stGroupe}" />
+                            <PropertyValue Property="Value" Path="stGroupe_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stExterne}" />
+                            <PropertyValue Property="Value" Path="stExterne_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>mainDOeuvre}" />
+                            <PropertyValue Property="Value" Path="mainOeuvre_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresFrais}" />
+                            <PropertyValue Property="Value" Path="autresFrais_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaFinN1}" />
+                            <PropertyValue Property="Value" Path="rbaN_1_F" />
+                            <PropertyValue Property="Criticality" Path="rbaN_1Crit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaN_1Crit}" />
+                            <PropertyValue Property="Value" Path="rbaN_1Crit" />/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaFinM1}" />
+                            <PropertyValue Property="Value" Path="rbaM_1_F" />
+                            <PropertyValue Property="Criticality" Path="rbaM_1Crit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaM_1Crit}" />
+                            <PropertyValue Property="Value" Path="rbaM_1Crit" />/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>variationRbaN}" />
+                            <PropertyValue Property="Value" Path="rbaVariationN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>variationRbaM}" />
+                            <PropertyValue Property="Value" Path="rbaVariationM_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaFinAffaire}" />
+                            <PropertyValue Property="Value" Path="rbaFinAffaire_F" />
+                            <PropertyValue Property="Criticality" Path="rbaFinAffaireCrit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaFinAffaireCrit}" />
+                            <PropertyValue Property="Value" Path="rbaFinAffaireCrit" />/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>aleasEtudesEt}" />
+                            <PropertyValue Property="Value" Path="aleasEtudeTravaux_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>aleasSinistresEtContentieux}" />
+                            <PropertyValue Property="Value" Path="aleasSinistresContentieux_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>aleasDivers}" />
+                            <PropertyValue Property="Value" Path="aleasDivers_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>creancesClients}" />
+                            <PropertyValue Property="Value" Path="creancesClients_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>Depenses}" />
+                            <PropertyValue Property="Value" Path="Depenses_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>Recettes}" />
+                            <PropertyValue Property="Value" Path="Recettes_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ufo_pp" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ufo_p" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ufo" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UFOName" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="pole" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="departement" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>cdg}" />
+                            <PropertyValue Property="Value" Path="ProfitCenter" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="project" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nAffaire}" />
+                            <PropertyValue Property="Value" Path="BusinessNo" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>affaire}" />
+                            <PropertyValue Property="Value" Path="BusinessName" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>status}" />
+                            <PropertyValue Property="Value" Path="BusinessStatus" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>type}" />
+                            <PropertyValue Property="Value" Path="Type" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>activity}" />
+                            <PropertyValue Property="Value" Path="activity" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>typeDeMission}" />
+                            <PropertyValue Property="Value" Path="mission" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nClient}" />
+                            <PropertyValue Property="Value" Path="NoClientMarche" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nomDuClient}" />
+                            <PropertyValue Property="Value" Path="NClient" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="date_fin" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>responsable}" />
+                            <PropertyValue Property="Value" Path="PROJM" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>dateDerniereModification}" />
+                            <PropertyValue Property="Value" Path="ModifyDate" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>modifierPar}" />
+                            <PropertyValue Property="Value" Path="ModifyBy" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caCumulN1}" />
+                            <PropertyValue Property="Value" Path="caCumulN_1_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationExterneCumulN1}" />
+                            <PropertyValue Property="Value" Path="facturationExterneCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationGroupeCumulN1}" />
+                            <PropertyValue Property="Value" Path="facturationGroupeCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddInterUfoCumul}" />
+                            <PropertyValue Property="Value" Path="nddInterUfoCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddIntraUfoCumul}" />
+                            <PropertyValue Property="Value" Path="nddIntraUfoCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresProduitsCumulN1}" />
+                            <PropertyValue Property="Value" Path="autresProduitsCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesCumulN1}" />
+                            <PropertyValue Property="Value" Path="depensesCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stGroupeCumulN1}" />
+                            <PropertyValue Property="Value" Path="stGroupeCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stExterneCumulN1}" />
+                            <PropertyValue Property="Value" Path="stExterneCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>mainOeuvreCumulN1}" />
+                            <PropertyValue Property="Value" Path="mainOeuvreCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresFraisCumulN1}" />
+                            <PropertyValue Property="Value" Path="autresFraisCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>ajustementCumulN1}" />
+                            <PropertyValue Property="Value" Path="ajustementCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>pourcentageAvancementCumulN1}" />
+                            <PropertyValue Property="Value" Path="avcmntPercentCumulN_1_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>patCumulN1}" />
+                            <PropertyValue Property="Value" Path="patCumulN_1_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaCumulN1}" />
+                            <PropertyValue Property="Value" Path="rbaCumulN_1_F" />
+                            <PropertyValue Property="Criticality" Path="rbaCumulN_1Crit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaCumulN_1Crit}" />
+                            <PropertyValue Property="Value" Path="rbaCumulN_1Crit" />/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>pourcentRbaCumulN1}" />
+                            <PropertyValue Property="Value" Path="rbaPercentCumulN_1" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caCumul}" />
+                            <PropertyValue Property="Value" Path="caCumul_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationExterneCumul}" />
+                            <PropertyValue Property="Value" Path="facturationExterneCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationGroupeCumul}" />
+                            <PropertyValue Property="Value" Path="facturationGroupeCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddInterUfoCumul}" />
+                            <PropertyValue Property="Value" Path="nddInterUfoCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddIntraUfoCumul}" />
+                            <PropertyValue Property="Value" Path="nddIntraUfoCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresProduitsCumul}" />
+                            <PropertyValue Property="Value" Path="autresProduitsCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesCumul}" />
+                            <PropertyValue Property="Value" Path="depensesCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stGroupeCumul}" />
+                            <PropertyValue Property="Value" Path="stGroupeCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stExterneCumul}" />
+                            <PropertyValue Property="Value" Path="stExterneCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>mainOeuvreCumul}" />
+                            <PropertyValue Property="Value" Path="mainOeuvreCumul_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresFraisCumul}" />
+                            <PropertyValue Property="Value" Path="autresFraisCumul_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>pourcentAvancementCumul}" />
+                            <PropertyValue Property="Value" Path="avcmntPercentCumul_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>ajustementCumul}" />
+                            <PropertyValue Property="Value" Path="ajustementCumul_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>patCumul}" />
+                            <PropertyValue Property="Value" Path="patCumul_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaCumul}" />
+                            <PropertyValue Property="Value" Path="rbaCumul_F" />
+                            <PropertyValue Property="Criticality" Path="rbaCumulCrit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaCumulCrit}" />
+                            <PropertyValue Property="Value" Path="rbaCumulCrit" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caNencours}" />
+                            <PropertyValue Property="Value" Path="caNEncours_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationExterneNencours}" />
+                            <PropertyValue Property="Value" Path="facturationExterneNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationGroupeNencours}" />
+                            <PropertyValue Property="Value" Path="facturationGroupeNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddInterUfoNencours}" />
+                            <PropertyValue Property="Value" Path="nddInterUfoNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddIntraUfoNencours}" />
+                            <PropertyValue Property="Value" Path="nddIntraUfoNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresProduitsNencours}" />
+                            <PropertyValue Property="Value" Path="autresProduitsNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesNencours}" />
+                            <PropertyValue Property="Value" Path="depensesNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stGroupeNencours}" />
+                            <PropertyValue Property="Value" Path="stGroupeNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stExterneNencours}" />
+                            <PropertyValue Property="Value" Path="stExterneNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>mainOeuvreNencours}" />
+                            <PropertyValue Property="Value" Path="mainOeuvreNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresFraisNencours}" />
+                            <PropertyValue Property="Value" Path="autresFraisNEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>pourcentAvancementNencours}" />
+                            <PropertyValue Property="Value" Path="avcmntPercentNEncours_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>ajustementNencours}" />
+                            <PropertyValue Property="Value" Path="ajustementNEncours_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>patNencours}" />
+                            <PropertyValue Property="Value" Path="patNEncours_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaNencours}" />
+                            <PropertyValue Property="Value" Path="rbaNEncours_F" />
+                            <PropertyValue Property="Criticality" Path="rbaNEncoursCrit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaNEncoursCrit}" />
+                            <PropertyValue Property="Value" Path="rbaNEncoursCrit" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>caMencours}" />
+                            <PropertyValue Property="Value" Path="caMEncours_F" />
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationExterneMencours}" />
+                            <PropertyValue Property="Value" Path="facturationExterneMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>facturationGroupeMencours}" />
+                            <PropertyValue Property="Value" Path="facturationGroupeMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddInterUfoMencours}" />
+                            <PropertyValue Property="Value" Path="nddInterUfoMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>nddIntraUfoMencours}" />
+                            <PropertyValue Property="Value" Path="nddIntraUfoMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresProduitsMencours}" />
+                            <PropertyValue Property="Value" Path="autresProduitsMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>depensesMencours}" />
+                            <PropertyValue Property="Value" Path="depensesMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stGroupeMencours}" />
+                            <PropertyValue Property="Value" Path="stGroupeMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>stExterneMencours}" />
+                            <PropertyValue Property="Value" Path="stExterneMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>mainOeuvreMencours}" />
+                            <PropertyValue Property="Value" Path="mainOeuvreMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>autresFraisMencours}" />
+                            <PropertyValue Property="Value" Path="autresFraisMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>pourcentMencours}" />
+                            <PropertyValue Property="Value" Path="avcmntPercentMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>ajustementMencours}" />
+                            <PropertyValue Property="Value" Path="ajustementMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>patMencours}" />
+                            <PropertyValue Property="Value" Path="patMEncours_F" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaMencours}" />
+                            <PropertyValue Property="Value" Path="rbaMEncours_F" />
+                            <PropertyValue Property="Criticality" Path="rbaMEncoursCrit"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                        </Record>
+                        
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>rbaMEncoursCrit}" />
+                            <PropertyValue Property="Value" Path="rbaMEncoursCrit" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
