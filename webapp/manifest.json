@@ -117,13 +117,7 @@
     "extends": {
       "extensions": {
         "sap.ui.viewExtensions": {
-          "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {
-            "AnalyticalTableColumnsExtension|ZC_EMSP_REPORTResults": {
-              "type": "XML",
-              "fragmentName": "com.avv.ingerop.emx.emspreport.ext.fragment.CaBudgetN_1Custom",
-              "className": "sap.ui.core.Fragment"
-            }
-          }
+          "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {}
         },
         "sap.ui.controllerExtensions": {
           "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {

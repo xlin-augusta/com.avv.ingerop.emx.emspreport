@@ -1,0 +1,258 @@
+<core:FragmentDefinition 
+    xmlns:core="sap.ui.core" 
+    xmlns:table="sap.ui.table" 
+    xmlns="sap.m">
+
+    <table:AnalyticalColumn id="caCumulN_1CustomId" width="8rem">
+        <Label id="caBudgetN_1CustomLabelId" text="{i18n>caCumulN_1CustomLabel}" />
+        <table:template>
+            <Text 
+                id="caBudgetN_1CustomTextId" 
+                text="{= ${caCumulN_1} != 0 ? ${caCumulN_1} : ${caPCumulN_1} != 0 ? ${caPCumulN_1} : ${caSPCumulN_1}}"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;56&quot;, &quot;leadingProperty&quot;: &quot;caCumulN_1&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="ajustementCumulN_1CustomId" width="8rem">
+        <Label id="ajustementCumulN_1CustomLabelId" text="{i18n>ajustementCumulN_1CustomLabel}" />
+        <table:template>
+            <Text 
+                id="ajustementCumulN_1CustomTextId" 
+                text="{= ${ajustementCumulN_1} != 0 ? ${ajustementCumulN_1} : ${ajustementPCumulN_1} != 0 ? ${ajustementPCumulN_1} : ${ajustementSPCumulN_1} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;70&quot;, &quot;leadingProperty&quot;: &quot;ajustementCumulN_1&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="avcmntPercentCumulN_1CustomId" width="8rem">
+        <Label id="avcmntPercentCumulN_1CustomLabelId" text="{i18n>avcmntPercentCumulN_1CustomLabel}" />
+        <table:template>
+            <Text 
+                id="avcmntPercentCumulN_1CustomTextId" 
+                text="{= ${avcmntPercentCumulN_1} != 0 ? ${avcmntPercentCumulN_1} : ${avcmntPercentPCumulN_1} != 0 ? ${avcmntPercentPCumulN_1} : ${avcmntPercentSPCumulN_1} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;74&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentCumulN_1&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="patCumulN_1CustomId" width="8rem">
+        <Label id="patCumulN_1CustomLabelId" text="{i18n>patCumulN_1CustomLabel}" />
+        <table:template>
+            <Text 
+                id="patCumulN_1CustomTextId" 
+                text="{= ${patCumulN_1} != 0 ? ${patCumulN_1} : ${patPCumulN_1} != 0 ? ${patPCumulN_1} : ${patSPCumulN_1} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;78&quot;, &quot;leadingProperty&quot;: &quot;patCumulN_1&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="rbaCumulN_1CustomId" width="8rem">
+        <Label id="rbaCumulN_1CustomLabelId" text="{i18n>rbaCumulN_1CustomLabel}" />
+        <table:template>
+            <Text 
+                id="rbaCumulN_1CustomTextId" 
+                text="{= ${rbaCumulN_1} != 0 ? ${rbaCumulN_1} : ${rbaPCumulN_1} != 0 ? ${rbaPCumulN_1} : ${rbaSPCumulN_1} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;82&quot;, &quot;leadingProperty&quot;: &quot;rbaCumulN_1&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="rbaPercentCumulN_1CustomId" width="8rem">
+        <Label id="rbaPercentCumulN_1CustomLabelId" text="{i18n>rbaPercentCumulN_1CustomLabel}" />
+        <table:template>
+            <Text 
+                id="rbaPercentCumulN_1CustomTextId" 
+                text="{= ${rbaPercentCumulN_1} != 0 ? ${rbaPercentCumulN_1} : ${rbaPercentPCumulN_1} != 0 ? ${rbaPercentPCumulN_1} : ${rbaPercentSPCumulN_1} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaPercentCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;87&quot;, &quot;leadingProperty&quot;: &quot;rbaPercentCumulN_1&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="caCumulCustomId" width="8rem">
+        <Label id="caCumulCustomLabelId" text="{i18n>caCumulCustomLabel}" />
+        <table:template>
+            <Text 
+                id="caCumulCustomTextId" 
+                text="{= ${caCumul} != 0 ? ${caCumul} : ${caPCumul} != 0 ? ${caPCumul} : ${caSPCumul} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;91&quot;, &quot;leadingProperty&quot;: &quot;caCumul&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="avcmntPercentCumulCustomId" width="8rem">
+        <Label id="avcmntPercentCumulCustomLabelId" text="{i18n>avcmntPercentCumulCustomLabel}" />
+        <table:template>
+            <Text 
+                id="avcmntPercentCumulCustomTextId" 
+                text="{= ${avcmntPercentCumul} != 0 ? ${avcmntPercentCumul} : ${avcmntPercentPCumul} != 0 ? ${avcmntPercentPCumul} : ${avcmntPercentSPCumul} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;105&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentCumul&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="ajustementCumulCustomId" width="8rem">
+        <Label id="ajustementCumulCustomLabelId" text="{i18n>ajustementCumulCustomLabel}" />
+        <table:template>
+            <Text 
+                id="ajustementCumulCustomTextId" 
+                text="{= ${ajustementCumul} != 0 ? ${ajustementCumul} : ${ajustementPCumul} != 0 ? ${ajustementPCumul} : ${ajustementSPCumul} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;109&quot;, &quot;leadingProperty&quot;: &quot;ajustementCumul&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="patCumulCustomId" width="8rem"> 
+        <Label id="patCumulCustomLabelId" text="{i18n>patCumulCustomLabel}" />
+        <table:template>
+            <Text 
+                id="patCumulCustomTextId" 
+                text="{= ${patCumul} != 0 ? ${patCumul} : ${patPCumul} != 0 ? ${patPCumul} : ${patSPCumul} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;113&quot;, &quot;leadingProperty&quot;: &quot;patCumul&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="rbaCumulCustomId" width="8rem">
+        <Label id="rbaCumulCustomLabelId" text="{i18n>rbaCumulCustomLabel}" />
+        <table:template>
+            <Text 
+                id="rbaCumulCustomTextId" 
+                text="{= ${rbaCumul} != 0 ? ${rbaCumul} : ${rbaPCumul} != 0 ? ${rbaPCumul} : ${rbaSPCumul} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;117&quot;, &quot;leadingProperty&quot;: &quot;rbaCumul&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="caNEncoursCustomId" width="8rem">
+        <Label id="caNEncoursCustomLabelId" text="{i18n>caNEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="caNEncoursCustomTextId" 
+                text="{= ${caNEncours} != 0 ? ${caNEncours} : ${caPNEncours} != 0 ? ${caPNEncours} : ${caSPNEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;122&quot;, &quot;leadingProperty&quot;: &quot;caNEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="avcmntPercentNEncoursCustomId" width="8rem">
+        <Label id="avcmntPercentNEncoursCustomLabelId" text="{i18n>avcmntPercentNEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="avcmntPercentNEncoursCustomTextId" 
+                text="{= ${avcmntPercentNEncours} != 0 ? ${avcmntPercentNEncours} : ${avcmntPercentPNEncours} != 0 ? ${avcmntPercentPNEncours} : ${avcmntPercentSPNEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;136&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentNEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="ajustementNEncoursCustomId" width="8rem">
+        <Label id="ajustementNEncoursCustomLabelId" text="{i18n>ajustementNEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="ajustementNEncoursCustomTextId" 
+                text="{= ${ajustementNEncours} != 0 ? ${ajustementNEncours} : ${ajustementPNEncours} != 0 ? ${ajustementPNEncours} : ${ajustementSPNEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;140&quot;, &quot;leadingProperty&quot;: &quot;ajustementNEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="patNEncoursCustomId" width="8rem">
+        <Label id="patNEncoursCustomLabelId" text="{i18n>patNEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="patNEncoursCustomTextId" 
+                text="{= ${patNEncours} != 0 ? ${patNEncours} : ${patPNEncours} != 0 ? ${patPNEncours} : ${patSPNEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;144&quot;, &quot;leadingProperty&quot;: &quot;patNEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="rbaNEncoursCustomId" width="8rem">
+        <Label id="rbaNEncoursCustomLabelId" text="{i18n>rbaNEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="rbaNEncoursCustomTextId" 
+                text="{= ${rbaNEncours} != 0 ? ${rbaNEncours} : ${rbaPNEncours} != 0 ? ${rbaPNEncours} : ${rbaSPNEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;148&quot;, &quot;leadingProperty&quot;: &quot;rbaNEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="caMEncoursCustomId" width="8rem">
+        <Label id="caMEncoursCustomLabelId" text="{i18n>caMEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="caMEncoursCustomTextId" 
+                text="{= ${caMEncours} != 0 ? ${caMEncours} : ${caPMEncours} != 0 ? ${caPMEncours} : ${caSPMEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;153&quot;, &quot;leadingProperty&quot;: &quot;caMEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="avcmntPercentMEncoursCustomId" width="8rem">
+        <Label id="avcmntPercentMEncoursCustomLabelId" text="{i18n>avcmntPercentMEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="avcmntPercentMEncoursCustomTextId" 
+                text="{= ${avcmntPercentMEncours} != 0 ? ${avcmntPercentMEncours} : ${avcmntPercentPMEncours} != 0 ? ${avcmntPercentPMEncours} : ${avcmntPercentSPMEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;167&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentMEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="ajustementMEncoursCustomId" width="8rem">
+        <Label id="ajustementMEncoursCustomLabelId" text="{i18n>ajustementMEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="ajustementMEncoursCustomTextId" 
+                text="{= ${ajustementMEncours} != 0 ? ${ajustementMEncours} : ${ajustementPMEncours} != 0 ? ${ajustementPMEncours} : ${ajustementSPMEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;171&quot;, &quot;leadingProperty&quot;: &quot;ajustementMEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="patMEncoursCustomId" width="8rem">
+        <Label id="patMEncoursCustomLabelId" text="{i18n>patMEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="patMEncoursCustomTextId" 
+                text="{= ${patMEncours} != 0 ? ${patMEncours} : ${patPMEncours} != 0 ? ${patPMEncours} : ${patSPMEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;175&quot;, &quot;leadingProperty&quot;: &quot;patMEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+    <table:AnalyticalColumn id="rbaMEncoursCustomId" width="8rem">
+        <Label id="rbaMEncoursCustomLabelId" text="{i18n>rbaMEncoursCustomLabel}" />
+        <table:template>
+            <Text 
+                id="rbaMEncoursCustomTextId" 
+                text="{= ${rbaMEncours} != 0 ? ${rbaMEncours} : ${rbaPMEncours} != 0 ? ${rbaPMEncours} : ${rbaSPMEncours} }"/>
+        </table:template>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;180&quot;, &quot;leadingProperty&quot;: &quot;rbaMEncours&quot;}"/>
+        </table:customData>
+    </table:AnalyticalColumn>
+
+</core:FragmentDefinition>

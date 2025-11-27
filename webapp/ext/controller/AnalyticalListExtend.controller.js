@@ -18,9 +18,7 @@ sap.ui.define(
                     let sSelect = oBindingParams.parameters.select || "";
 
                     const aRequiredFields = [
-                        "caBudgetN_1",
-                        "caBudgetN_1_P",
-                        "caBudgetN_1_SP",
+                        "caBudgetN_1"
                     ];
 
                     aRequiredFields.forEach(field => {
@@ -30,6 +28,15 @@ sap.ui.define(
                     });
 
                     oBindingParams.parameters.select = sSelect;
+                }
+            },
+            formatCustomColumn: function(affaire, projet, superProjet){
+                if(affaire){
+                    return affaire;
+                } else if (projet) {
+                    return projet;
+                } else {
+                    return superProjet;
                 }
             }
 
