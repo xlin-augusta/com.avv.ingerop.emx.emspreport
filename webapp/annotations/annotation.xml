@@ -1,26 +1,41 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.xml">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common" />
     </edmx:Reference>
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
     </edmx:Reference>
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
     </edmx:Reference>
     <edmx:Reference Uri="/sap/opu/odata/sap/ZC_EMSP_REPORT_CDS/$metadata">
-        <edmx:Include Namespace="ZC_EMSP_REPORT_CDS" Alias="SAP"/>
+        <edmx:Include Namespace="ZC_EMSP_REPORT_CDS" Alias="SAP" />
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
-
-            <!-- Pour forcer l'affichage simple -->
+            
             <Annotations Target="SAP.ZC_EMSP_REPORTResult">
-
+                <!-- Obligatoire pour ALP : définit comment l’ALP groupe-->
+                <Annotation Term="UI.PresentationVariant" Qualifier="Default">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="GroupBy">
+                            <Collection>
+                                <PropertyPath>superProject</PropertyPath>
+                                <PropertyPath>project</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                        <PropertyValue Property="Label" String="{@i18n>caBudgetFinN1}" />
+                            <PropertyValue Property="Label" String="{@i18n>caBudgetFinN1}" />
                             <PropertyValue Property="Value" Path="caBudgetN_1_F" />
                         </Record>
                         <Record Type="UI.DataField">
@@ -106,22 +121,22 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaFinN1}" />
                             <PropertyValue Property="Value" Path="rbaN_1_F" />
-                            <PropertyValue Property="Criticality" Path="rbaN_1Crit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                            <PropertyValue Property="Criticality" Path="rbaN_1Crit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaN_1Crit}" />
-                            <PropertyValue Property="Value" Path="rbaN_1Crit" />/>
+                            <PropertyValue Property="Value" Path="rbaN_1Crit" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaFinM1}" />
                             <PropertyValue Property="Value" Path="rbaM_1_F" />
-                            <PropertyValue Property="Criticality" Path="rbaM_1Crit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                            <PropertyValue Property="Criticality" Path="rbaM_1Crit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaM_1Crit}" />
-                            <PropertyValue Property="Value" Path="rbaM_1Crit" />/>
+                            <PropertyValue Property="Value" Path="rbaM_1Crit" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>variationRbaN}" />
@@ -134,12 +149,12 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaFinAffaire}" />
                             <PropertyValue Property="Value" Path="rbaFinAffaire_F" />
-                            <PropertyValue Property="Criticality" Path="rbaFinAffaireCrit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                            <PropertyValue Property="Criticality" Path="rbaFinAffaireCrit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaFinAffaireCrit}" />
-                            <PropertyValue Property="Value" Path="rbaFinAffaireCrit" />/>
+                            <PropertyValue Property="Value" Path="rbaFinAffaireCrit" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>aleasEtudesEt}" />
@@ -228,7 +243,6 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="date_fin" />
                         </Record>
-
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>responsable}" />
                             <PropertyValue Property="Value" Path="PROJM" />
@@ -241,11 +255,10 @@
                             <PropertyValue Property="Label" String="{@i18n>modifierPar}" />
                             <PropertyValue Property="Value" Path="ModifyBy" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>caCumulN1}" />
                             <PropertyValue Property="Value" Path="caCumulN_1_F" />
-                        </Record> -->
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>facturationExterneCumulN1}" />
                             <PropertyValue Property="Value" Path="facturationExterneCumulN_1_F" />
@@ -286,8 +299,7 @@
                             <PropertyValue Property="Label" String="{@i18n>autresFraisCumulN1}" />
                             <PropertyValue Property="Value" Path="autresFraisCumulN_1_F" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>ajustementCumulN1}" />
                             <PropertyValue Property="Value" Path="ajustementCumulN_1_F" />
                         </Record>
@@ -302,22 +314,21 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaCumulN1}" />
                             <PropertyValue Property="Value" Path="rbaCumulN_1_F" />
-                            <PropertyValue Property="Criticality" Path="rbaCumulN_1Crit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+                            <PropertyValue Property="Criticality" Path="rbaCumulN_1Crit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>pourcentRbaCumulN1}" />
                             <PropertyValue Property="Value" Path="rbaPercentCumulN_1_F" />
-                        </Record> -->
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaCumulN_1Crit}" />
-                            <PropertyValue Property="Value" Path="rbaCumulN_1Crit" />/>
+                            <PropertyValue Property="Value" Path="rbaCumulN_1Crit" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>caCumul}" />
                             <PropertyValue Property="Value" Path="caCumul_F" />
-                        </Record> -->
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>facturationExterneCumul}" />
                             <PropertyValue Property="Value" Path="facturationExterneCumul_F" />
@@ -358,8 +369,7 @@
                             <PropertyValue Property="Label" String="{@i18n>autresFraisCumul}" />
                             <PropertyValue Property="Value" Path="autresFraisCumul_F" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>pourcentAvancementCumul}" />
                             <PropertyValue Property="Value" Path="avcmntPercentCumul_F" />
                         </Record>
@@ -374,18 +384,17 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaCumul}" />
                             <PropertyValue Property="Value" Path="rbaCumul_F" />
-                            <PropertyValue Property="Criticality" Path="rbaCumulCrit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
-                        </Record> -->
+                            <PropertyValue Property="Criticality" Path="rbaCumulCrit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaCumulCrit}" />
                             <PropertyValue Property="Value" Path="rbaCumulCrit" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>caNencours}" />
                             <PropertyValue Property="Value" Path="caNEncours_F" />
-                        </Record> -->
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>facturationExterneNencours}" />
                             <PropertyValue Property="Value" Path="facturationExterneNEncours_F" />
@@ -426,8 +435,7 @@
                             <PropertyValue Property="Label" String="{@i18n>autresFraisNencours}" />
                             <PropertyValue Property="Value" Path="autresFraisNEncours_F" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>pourcentAvancementNencours}" />
                             <PropertyValue Property="Value" Path="avcmntPercentNEncours_F" />
                         </Record>
@@ -442,18 +450,17 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaNencours}" />
                             <PropertyValue Property="Value" Path="rbaNEncours_F" />
-                            <PropertyValue Property="Criticality" Path="rbaNEncoursCrit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
-                        </Record> -->
+                            <PropertyValue Property="Criticality" Path="rbaNEncoursCrit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaNEncoursCrit}" />
                             <PropertyValue Property="Value" Path="rbaNEncoursCrit" />
                         </Record>
-
-                        <!-- <Record Type="UI.DataField">
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>caMencours}" />
                             <PropertyValue Property="Value" Path="caMEncours_F" />
-                        </Record> -->
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>facturationExterneMencours}" />
                             <PropertyValue Property="Value" Path="facturationExterneMEncours_F" />
@@ -493,11 +500,7 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>autresFraisMencours}" />
                             <PropertyValue Property="Value" Path="autresFraisMEncours_F" />
-                        </Record>
-
-                        <!-- <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="{@i18n>pourcentMencours}" />
-                            <PropertyValue Property="Value" Path="avcmntPercentMEncours_F" />
+                            <Annotation Term="HTML5.RowSpanForDuplicateValues" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>ajustementMencours}" />
@@ -506,17 +509,21 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>patMencours}" />
                             <PropertyValue Property="Value" Path="patMEncours_F" />
-                        </Record> -->
-                        <!-- <Record Type="UI.DataField">
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaMencours}" />
                             <PropertyValue Property="Value" Path="rbaMEncours_F" />
-                            <PropertyValue Property="Criticality" Path="rbaMEncoursCrit"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
-                        </Record> -->
-                        <!-- <Record Type="UI.DataField">
+                            <PropertyValue Property="Criticality" Path="rbaMEncoursCrit" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="{@i18n>rbaMEncoursCrit}" />
                             <PropertyValue Property="Value" Path="rbaMEncoursCrit" />
-                        </Record> -->
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>pourcentMencours}" />
+                            <PropertyValue Property="Value" Path="avcmntPercentMEncours" />
+                        </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
