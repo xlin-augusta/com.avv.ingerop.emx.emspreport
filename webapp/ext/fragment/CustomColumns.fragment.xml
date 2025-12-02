@@ -1,258 +1,191 @@
-<core:FragmentDefinition 
-    xmlns:core="sap.ui.core" 
-    xmlns:table="sap.ui.table" 
-    xmlns="sap.m">
-
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m">
     <table:AnalyticalColumn id="caCumulN_1CustomId" width="8rem">
-        <Label id="caBudgetN_1CustomLabelId" text="{i18n>caCumulN_1CustomLabel}" />
+        <Label id="caCumulN_1CustomLabelId" text="{i18n>caCumulN_1CustomLabel}"/>
         <table:template>
-            <Text 
-                id="caBudgetN_1CustomTextId" 
-                text="{= ${caCumulN_1} != 0 ? ${caCumulN_1} : ${caPCumulN_1} != 0 ? ${caPCumulN_1} : ${caSPCumulN_1}}"/>
+            <Text id="caCumulN_1CustomTextId" text="{= Number(${caCumulN_1}) ? ${caCumulN_1_F} : Number(${caPCumulN_1}) ? ${caPCumulN_1_F} : ${caSPCumulN_1_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;56&quot;, &quot;leadingProperty&quot;: &quot;caCumulN_1&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;56&quot;, &quot;leadingProperty&quot;: &quot;caCumulN_1_F&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="ajustementCumulN_1CustomId" width="8rem">
-        <Label id="ajustementCumulN_1CustomLabelId" text="{i18n>ajustementCumulN_1CustomLabel}" />
+        <Label id="ajustementCumulN_1CustomLabelId" text="{i18n>ajustementCumulN_1CustomLabel}"/>
         <table:template>
-            <Text 
-                id="ajustementCumulN_1CustomTextId" 
-                text="{= ${ajustementCumulN_1} != 0 ? ${ajustementCumulN_1} : ${ajustementPCumulN_1} != 0 ? ${ajustementPCumulN_1} : ${ajustementSPCumulN_1} }"/>
+            <Text id="ajustementCumulN_1CustomTextId" text="{= Number(${ajustementCumulN_1}) ? ${ajustementCumulN_1_F} : Number(${ajustementPCumulN_1}) ? ${ajustementPCumulN_1_F} : ${ajustementSPCumulN_1_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;70&quot;, &quot;leadingProperty&quot;: &quot;ajustementCumulN_1&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;67&quot;, &quot;leadingProperty&quot;: &quot;ajustementCumulN_1&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="avcmntPercentCumulN_1CustomId" width="8rem">
-        <Label id="avcmntPercentCumulN_1CustomLabelId" text="{i18n>avcmntPercentCumulN_1CustomLabel}" />
+        <Label id="avcmntPercentCumulN_1CustomLabelId" text="{i18n>avcmntPercentCumulN_1CustomLabel}"/>
         <table:template>
-            <Text 
-                id="avcmntPercentCumulN_1CustomTextId" 
-                text="{= ${avcmntPercentCumulN_1} != 0 ? ${avcmntPercentCumulN_1} : ${avcmntPercentPCumulN_1} != 0 ? ${avcmntPercentPCumulN_1} : ${avcmntPercentSPCumulN_1} }"/>
+            <Text id="avcmntPercentCumulN_1CustomTextId" text="{= Number(${avcmntPercentCumulN_1}) ? ${avcmntPercentCumulN_1_F} : Number(${avcmntPercentPCumulN_1}) ? ${avcmntPercentPCumulN_1_F} : ${avcmntPercentSPCumulN_1_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;74&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentCumulN_1&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;68&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentCumulN_1&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="patCumulN_1CustomId" width="8rem">
-        <Label id="patCumulN_1CustomLabelId" text="{i18n>patCumulN_1CustomLabel}" />
+        <Label id="patCumulN_1CustomLabelId" text="{i18n>patCumulN_1CustomLabel}"/>
         <table:template>
-            <Text 
-                id="patCumulN_1CustomTextId" 
-                text="{= ${patCumulN_1} != 0 ? ${patCumulN_1} : ${patPCumulN_1} != 0 ? ${patPCumulN_1} : ${patSPCumulN_1} }"/>
+            <Text id="patCumulN_1CustomTextId" text="{= Number(${patCumulN_1}) ? ${patCumulN_1_F} : Number(${patPCumulN_1}) ? ${patPCumulN_1_F} : ${patSPCumulN_1_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;78&quot;, &quot;leadingProperty&quot;: &quot;patCumulN_1&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;69&quot;, &quot;leadingProperty&quot;: &quot;patCumulN_1&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="rbaCumulN_1CustomId" width="8rem">
-        <Label id="rbaCumulN_1CustomLabelId" text="{i18n>rbaCumulN_1CustomLabel}" />
+        <Label id="rbaCumulN_1CustomLabelId" text="{i18n>rbaCumulN_1CustomLabel}"/>
         <table:template>
-            <Text 
-                id="rbaCumulN_1CustomTextId" 
-                text="{= ${rbaCumulN_1} != 0 ? ${rbaCumulN_1} : ${rbaPCumulN_1} != 0 ? ${rbaPCumulN_1} : ${rbaSPCumulN_1} }"/>
+            <Text id="rbaCumulN_1CustomTextId" text="{= Number(${rbaCumulN_1}) ? ${rbaCumulN_1_F} : Number(${rbaPCumulN_1}) ? ${rbaPCumulN_1_F} : ${rbaSPCumulN_1_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;82&quot;, &quot;leadingProperty&quot;: &quot;rbaCumulN_1&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;70&quot;, &quot;leadingProperty&quot;: &quot;rbaCumulN_1&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="rbaPercentCumulN_1CustomId" width="8rem">
-        <Label id="rbaPercentCumulN_1CustomLabelId" text="{i18n>rbaPercentCumulN_1CustomLabel}" />
+        <Label id="rbaPercentCumulN_1CustomLabelId" text="{i18n>rbaPercentCumulN_1CustomLabel}"/>
         <table:template>
-            <Text 
-                id="rbaPercentCumulN_1CustomTextId" 
-                text="{= ${rbaPercentCumulN_1} != 0 ? ${rbaPercentCumulN_1} : ${rbaPercentPCumulN_1} != 0 ? ${rbaPercentPCumulN_1} : ${rbaPercentSPCumulN_1} }"/>
+            <Text id="rbaPercentCumulN_1CustomTextId" text="{= Number(${rbaPercentCumulN_1}) ? ${rbaPercentCumulN_1_F} : Number(${rbaPercentPCumulN_1}) ? ${rbaPercentPCumulN_1_F} : ${rbaPercentSPCumulN_1_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaPercentCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;87&quot;, &quot;leadingProperty&quot;: &quot;rbaPercentCumulN_1&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaPercentCumulN_1CustomId&quot;, &quot;columnIndex&quot;: &quot;71&quot;, &quot;leadingProperty&quot;: &quot;rbaPercentCumulN_1&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="caCumulCustomId" width="8rem">
-        <Label id="caCumulCustomLabelId" text="{i18n>caCumulCustomLabel}" />
+        <Label id="caCumulCustomLabelId" text="{i18n>caCumulCustomLabel}"/>
         <table:template>
-            <Text 
-                id="caCumulCustomTextId" 
-                text="{= ${caCumul} != 0 ? ${caCumul} : ${caPCumul} != 0 ? ${caPCumul} : ${caSPCumul} }"/>
+            <Text id="caCumulCustomTextId" text="{= Number(${caCumul}) ? ${caCumul_F} : Number(${caPCumul}) ? ${caPCumul_F} : ${caSPCumul_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;91&quot;, &quot;leadingProperty&quot;: &quot;caCumul&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;73&quot;, &quot;leadingProperty&quot;: &quot;caCumul&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="avcmntPercentCumulCustomId" width="8rem">
-        <Label id="avcmntPercentCumulCustomLabelId" text="{i18n>avcmntPercentCumulCustomLabel}" />
+        <Label id="avcmntPercentCumulCustomLabelId" text="{i18n>avcmntPercentCumulCustomLabel}"/>
         <table:template>
-            <Text 
-                id="avcmntPercentCumulCustomTextId" 
-                text="{= ${avcmntPercentCumul} != 0 ? ${avcmntPercentCumul} : ${avcmntPercentPCumul} != 0 ? ${avcmntPercentPCumul} : ${avcmntPercentSPCumul} }"/>
+            <Text id="avcmntPercentCumulCustomTextId" text="{= Number(${avcmntPercentCumul}) ? ${avcmntPercentCumul_F} : Number(${avcmntPercentPCumul}) ? ${avcmntPercentPCumul_F} : ${avcmntPercentSPCumul_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;105&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentCumul&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;84&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentCumul&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="ajustementCumulCustomId" width="8rem">
-        <Label id="ajustementCumulCustomLabelId" text="{i18n>ajustementCumulCustomLabel}" />
+        <Label id="ajustementCumulCustomLabelId" text="{i18n>ajustementCumulCustomLabel}"/>
         <table:template>
-            <Text 
-                id="ajustementCumulCustomTextId" 
-                text="{= ${ajustementCumul} != 0 ? ${ajustementCumul} : ${ajustementPCumul} != 0 ? ${ajustementPCumul} : ${ajustementSPCumul} }"/>
+            <Text id="ajustementCumulCustomTextId" text="{= Number(${ajustementCumul}) ? ${ajustementCumul_F} : Number(${ajustementPCumul}) ? ${ajustementPCumul_F} : ${ajustementSPCumul_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;109&quot;, &quot;leadingProperty&quot;: &quot;ajustementCumul&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;85&quot;, &quot;leadingProperty&quot;: &quot;ajustementCumul&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
-    <table:AnalyticalColumn id="patCumulCustomId" width="8rem"> 
-        <Label id="patCumulCustomLabelId" text="{i18n>patCumulCustomLabel}" />
+    <table:AnalyticalColumn id="patCumulCustomId" width="8rem">
+        <Label id="patCumulCustomLabelId" text="{i18n>patCumulCustomLabel}"/>
         <table:template>
-            <Text 
-                id="patCumulCustomTextId" 
-                text="{= ${patCumul} != 0 ? ${patCumul} : ${patPCumul} != 0 ? ${patPCumul} : ${patSPCumul} }"/>
+            <Text id="patCumulCustomTextId" text="{= Number(${patCumul}) ? ${patCumul_F} : Number(${patPCumul}) ? ${patPCumul_F} : ${patSPCumul_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;113&quot;, &quot;leadingProperty&quot;: &quot;patCumul&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;86&quot;, &quot;leadingProperty&quot;: &quot;patCumul&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="rbaCumulCustomId" width="8rem">
-        <Label id="rbaCumulCustomLabelId" text="{i18n>rbaCumulCustomLabel}" />
+        <Label id="rbaCumulCustomLabelId" text="{i18n>rbaCumulCustomLabel}"/>
         <table:template>
-            <Text 
-                id="rbaCumulCustomTextId" 
-                text="{= ${rbaCumul} != 0 ? ${rbaCumul} : ${rbaPCumul} != 0 ? ${rbaPCumul} : ${rbaSPCumul} }"/>
+            <Text id="rbaCumulCustomTextId" text="{= Number(${rbaCumul}) ? ${rbaCumul_F} : Number(${rbaPCumul}) ? ${rbaPCumul_F} : ${rbaSPCumul_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;117&quot;, &quot;leadingProperty&quot;: &quot;rbaCumul&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaCumulCustomId&quot;, &quot;columnIndex&quot;: &quot;87&quot;, &quot;leadingProperty&quot;: &quot;rbaCumul&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="caNEncoursCustomId" width="8rem">
-        <Label id="caNEncoursCustomLabelId" text="{i18n>caNEncoursCustomLabel}" />
+        <Label id="caNEncoursCustomLabelId" text="{i18n>caNEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="caNEncoursCustomTextId" 
-                text="{= ${caNEncours} != 0 ? ${caNEncours} : ${caPNEncours} != 0 ? ${caPNEncours} : ${caSPNEncours} }"/>
+            <Text id="caNEncoursCustomTextId" text="{= Number(${caNEncours}) ? ${caNEncours_F} : Number(${caPNEncours}) ? ${caPNEncours_F} : ${caSPNEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;122&quot;, &quot;leadingProperty&quot;: &quot;caNEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;89&quot;, &quot;leadingProperty&quot;: &quot;caNEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="avcmntPercentNEncoursCustomId" width="8rem">
-        <Label id="avcmntPercentNEncoursCustomLabelId" text="{i18n>avcmntPercentNEncoursCustomLabel}" />
+        <Label id="avcmntPercentNEncoursCustomLabelId" text="{i18n>avcmntPercentNEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="avcmntPercentNEncoursCustomTextId" 
-                text="{= ${avcmntPercentNEncours} != 0 ? ${avcmntPercentNEncours} : ${avcmntPercentPNEncours} != 0 ? ${avcmntPercentPNEncours} : ${avcmntPercentSPNEncours} }"/>
+            <Text id="avcmntPercentNEncoursCustomTextId" text="{= Number(${avcmntPercentNEncours}) ? ${avcmntPercentNEncours_F} : Number(${avcmntPercentPNEncours}) ? ${avcmntPercentPNEncours_F} : ${avcmntPercentSPNEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;136&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentNEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;100&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentNEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="ajustementNEncoursCustomId" width="8rem">
-        <Label id="ajustementNEncoursCustomLabelId" text="{i18n>ajustementNEncoursCustomLabel}" />
+        <Label id="ajustementNEncoursCustomLabelId" text="{i18n>ajustementNEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="ajustementNEncoursCustomTextId" 
-                text="{= ${ajustementNEncours} != 0 ? ${ajustementNEncours} : ${ajustementPNEncours} != 0 ? ${ajustementPNEncours} : ${ajustementSPNEncours} }"/>
+            <Text id="ajustementNEncoursCustomTextId" text="{= Number(${ajustementNEncours}) ? ${ajustementNEncours_F} : Number(${ajustementPNEncours}) ? ${ajustementPNEncours_F} : ${ajustementSPNEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;140&quot;, &quot;leadingProperty&quot;: &quot;ajustementNEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;101&quot;, &quot;leadingProperty&quot;: &quot;ajustementNEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="patNEncoursCustomId" width="8rem">
-        <Label id="patNEncoursCustomLabelId" text="{i18n>patNEncoursCustomLabel}" />
+        <Label id="patNEncoursCustomLabelId" text="{i18n>patNEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="patNEncoursCustomTextId" 
-                text="{= ${patNEncours} != 0 ? ${patNEncours} : ${patPNEncours} != 0 ? ${patPNEncours} : ${patSPNEncours} }"/>
+            <Text id="patNEncoursCustomTextId" text="{= Number(${patNEncours}) ? ${patNEncours_F} : Number(${patPNEncours}) ? ${patPNEncours_F} : ${patSPNEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;144&quot;, &quot;leadingProperty&quot;: &quot;patNEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;102&quot;, &quot;leadingProperty&quot;: &quot;patNEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="rbaNEncoursCustomId" width="8rem">
-        <Label id="rbaNEncoursCustomLabelId" text="{i18n>rbaNEncoursCustomLabel}" />
+        <Label id="rbaNEncoursCustomLabelId" text="{i18n>rbaNEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="rbaNEncoursCustomTextId" 
-                text="{= ${rbaNEncours} != 0 ? ${rbaNEncours} : ${rbaPNEncours} != 0 ? ${rbaPNEncours} : ${rbaSPNEncours} }"/>
+            <Text id="rbaNEncoursCustomTextId" text="{= Number(${rbaNEncours}) ? ${rbaNEncours_F} : Number(${rbaPNEncours}) ? ${rbaPNEncours_F} : ${rbaSPNEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;148&quot;, &quot;leadingProperty&quot;: &quot;rbaNEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaNEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;103&quot;, &quot;leadingProperty&quot;: &quot;rbaNEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="caMEncoursCustomId" width="8rem">
-        <Label id="caMEncoursCustomLabelId" text="{i18n>caMEncoursCustomLabel}" />
+        <Label id="caMEncoursCustomLabelId" text="{i18n>caMEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="caMEncoursCustomTextId" 
-                text="{= ${caMEncours} != 0 ? ${caMEncours} : ${caPMEncours} != 0 ? ${caPMEncours} : ${caSPMEncours} }"/>
+            <Text id="caMEncoursCustomTextId" text="{= Number(${caMEncours}) ? ${caMEncours_F} : Number(${caPMEncours}) ? ${caPMEncours_F} : ${caSPMEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;153&quot;, &quot;leadingProperty&quot;: &quot;caMEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;caMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;105&quot;, &quot;leadingProperty&quot;: &quot;caMEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="avcmntPercentMEncoursCustomId" width="8rem">
-        <Label id="avcmntPercentMEncoursCustomLabelId" text="{i18n>avcmntPercentMEncoursCustomLabel}" />
+        <Label id="avcmntPercentMEncoursCustomLabelId" text="{i18n>avcmntPercentMEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="avcmntPercentMEncoursCustomTextId" 
-                text="{= ${avcmntPercentMEncours} != 0 ? ${avcmntPercentMEncours} : ${avcmntPercentPMEncours} != 0 ? ${avcmntPercentPMEncours} : ${avcmntPercentSPMEncours} }"/>
+            <Text id="avcmntPercentMEncoursCustomTextId" text="{= Number(${avcmntPercentMEncours}) ? ${avcmntPercentMEncours_F} : Number(${avcmntPercentPMEncours}) ? ${avcmntPercentPMEncours_F} : ${avcmntPercentSPMEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;167&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentMEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;avcmntPercentMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;116&quot;, &quot;leadingProperty&quot;: &quot;avcmntPercentMEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="ajustementMEncoursCustomId" width="8rem">
-        <Label id="ajustementMEncoursCustomLabelId" text="{i18n>ajustementMEncoursCustomLabel}" />
+        <Label id="ajustementMEncoursCustomLabelId" text="{i18n>ajustementMEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="ajustementMEncoursCustomTextId" 
-                text="{= ${ajustementMEncours} != 0 ? ${ajustementMEncours} : ${ajustementPMEncours} != 0 ? ${ajustementPMEncours} : ${ajustementSPMEncours} }"/>
+            <Text id="ajustementMEncoursCustomTextId" text="{= Number(${ajustementMEncours}) ? ${ajustementMEncours_F} : Number(${ajustementPMEncours}) ? ${ajustementPMEncours_F} : ${ajustementSPMEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;171&quot;, &quot;leadingProperty&quot;: &quot;ajustementMEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ajustementMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;117&quot;, &quot;leadingProperty&quot;: &quot;ajustementMEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="patMEncoursCustomId" width="8rem">
-        <Label id="patMEncoursCustomLabelId" text="{i18n>patMEncoursCustomLabel}" />
+        <Label id="patMEncoursCustomLabelId" text="{i18n>patMEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="patMEncoursCustomTextId" 
-                text="{= ${patMEncours} != 0 ? ${patMEncours} : ${patPMEncours} != 0 ? ${patPMEncours} : ${patSPMEncours} }"/>
+            <Text id="patMEncoursCustomTextId" text="{= Number(${patMEncours}) ? ${patMEncours_F} : Number(${patPMEncours}) ? ${patPMEncours_F} : ${patSPMEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;175&quot;, &quot;leadingProperty&quot;: &quot;patMEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;patMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;118&quot;, &quot;leadingProperty&quot;: &quot;patMEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
     <table:AnalyticalColumn id="rbaMEncoursCustomId" width="8rem">
-        <Label id="rbaMEncoursCustomLabelId" text="{i18n>rbaMEncoursCustomLabel}" />
+        <Label id="rbaMEncoursCustomLabelId" text="{i18n>rbaMEncoursCustomLabel}"/>
         <table:template>
-            <Text 
-                id="rbaMEncoursCustomTextId" 
-                text="{= ${rbaMEncours} != 0 ? ${rbaMEncours} : ${rbaPMEncours} != 0 ? ${rbaPMEncours} : ${rbaSPMEncours} }"/>
+            <Text id="rbaMEncoursCustomTextId" text="{= Number(${rbaMEncours}) ? ${rbaMEncours_F} : Number(${rbaPMEncours}) ? ${rbaPMEncours_F} : ${rbaSPMEncours_F} }"/>
         </table:template>
         <table:customData>
-            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;180&quot;, &quot;leadingProperty&quot;: &quot;rbaMEncours&quot;}"/>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;rbaMEncoursCustomId&quot;, &quot;columnIndex&quot;: &quot;119&quot;, &quot;leadingProperty&quot;: &quot;rbaMEncours&quot;}"/>
         </table:customData>
     </table:AnalyticalColumn>
-
 </core:FragmentDefinition>

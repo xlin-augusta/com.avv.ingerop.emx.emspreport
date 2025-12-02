@@ -116,9 +116,7 @@
     },
     "extends": {
       "extensions": {
-        "sap.ui.viewExtensions": {
-          "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {}
-        },
+        
         "sap.ui.controllerExtensions": {
           "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {
             "controllerName": "com.avv.ingerop.emx.emspreport.ext.controller.AnalyticalListExtend"
