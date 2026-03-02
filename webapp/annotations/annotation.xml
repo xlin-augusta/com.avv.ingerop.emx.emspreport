@@ -19,6 +19,18 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+
+             <Annotations Target="SAP.ZC_EMSP_REPORTResult/EndDate_T">
+                <Annotation Term="UI.Hidden" />
+            </Annotations>
+
+            <Annotations Target="SAP.ZC_EMSP_REPORTResult/StartDate_T">
+                <Annotation Term="UI.Hidden" />
+            </Annotations>
+
+            <Annotations Target="SAP.ZC_EMSP_REPORTResult/ID">
+                <Annotation Term="UI.Hidden" />
+            </Annotations>
             
             <Annotations Target="SAP.ZC_EMSP_REPORTResult">
                 <!-- Obligatoire pour ALP : définit comment l’ALP groupe-->

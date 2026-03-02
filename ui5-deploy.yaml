@@ -15,12 +15,12 @@ builder:
       configuration:
         target:
           destination: DS4
-          url: http://vhnrpds4ci.sap.ingerop.com:44300
+          url: https://vhnrpds4ci.sap.ingerop.com:44300
           client: '100'
         app:
           name: ZEMSP
           description: EMSP Report
           package: ZFGA
-          transport: DS4K901282
+          transport: DS4K901256
         exclude:
           - /test/
