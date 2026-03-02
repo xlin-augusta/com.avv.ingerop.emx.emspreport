@@ -153,13 +153,19 @@
             "defaultFilterMode": "compact"
           }
         },
-        "pages": {
-          "ObjectPage|ZC_EMSP_REPORTResults": {
-            "entitySet": "ZC_EMSP_REPORTResults",
+           "pages": {
+          "ObjectPage|ZC_FGASet": {
+            "entitySet": "ZC_FGASet",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage"
-            }
+            },
+            "navigation": {
+              "display": {
+                "path": "sap.apps.crossNavigation.outbounds",
+                "target": "FGA"
+              }
+            }               
           }
         }
       }
