@@ -143,6 +143,7 @@
             "condensedTableLayout": true,
             "showGoButtonOnFilterBar": true,
             "autoHide": false,
+            "smartVariantManagement": false,
             "tableSettings": {
               "multiSelect": false,
               "type": "AnalyticalTable",
